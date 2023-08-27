@@ -1,0 +1,69 @@
+.square{
+    height: 150px;
+    width: 150px;
+    border: none;
+    border-right: 4px solid white;
+    background-color: rgb(112, 112, 250);
+    font-size: 60px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.board{
+    display: flex;
+    flex-direction: column;
+    height: 63vh;
+    padding-top: 0vh;
+   
+}
+
+.board-row{
+    border-bottom: 4px solid white;
+    display: flex;
+    flex-direction: row;
+}
+
+.board-row:last-child{
+    border-bottom: none;
+}
+.square:last-child{
+    border-right: none;
+}
+
+@media screen and (max-width: 600px) {
+    .square{
+        height: 100px;
+        width: 100px;
+        font-size: 40px;
+    }
+    .board{
+        height: 45vh;
+    }
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.text-green {
+    color: rgb(28, 237, 28);
+  }
+  
+  .text-orange {
+    color: orange;
+  }
+  .winning {
+    animation: scaleText 1.5s infinite;
+    
+  }
+  @keyframes scaleText {
+    0% {
+      transform: 2.5rem;
+    }
+    50% {
+      font-size: 6.5rem;
+    }
+    100% {
+      font-size: 2.5rem;
+    }
+  }
